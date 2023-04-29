@@ -31,7 +31,7 @@ def get_page_data(max_page):
 
 def current_country():
     country = input("Выберите страну: ")
-    with open(f"proxy_{country}", "w") as file_input:
+    with open(f"proxy_{country}.txt", "w") as file_input:
         for i in range(1, int(max_page) + 1):
             page = requests.get(url + str(i))
             soup = BeautifulSoup(page.text, "html.parser")
